@@ -11,7 +11,6 @@ class Page3 : AppCompatActivity() {
 
     lateinit var fin : TextView
     lateinit var act : String
-    lateinit var dep : String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,7 +21,7 @@ class Page3 : AppCompatActivity() {
         val bundle = Bundle(intent.extras)
 
         val name = bundle?.getString("nombre") ?: ""
-        val deporte = bundle?.getString("deporte") ?: ""
+        val deporte = bundle!!.getString("deporte")
         val actividad = bundle?.getBoolean("activo") ?: ""
 
 
@@ -32,7 +31,7 @@ class Page3 : AppCompatActivity() {
         } else {
             act = "Inactivo"
         }
-        fin.text = "Deportista: $name\nDeporte: $dep\nActividad: $act"
+        fin.text = "Deportista: $name\nDeporte: $deporte\nActividad: $act"
     }
 
 
