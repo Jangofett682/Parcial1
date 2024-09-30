@@ -35,7 +35,6 @@ class Page2 : AppCompatActivity() {
 
         if (nacion == "Argentina") {
 
-
             val argentinos = DeporArg()
             val adapterArg = ArrayAdapter(this, android.R.layout.simple_list_item_1  , argentinos)
             deporList.adapter = adapterArg
